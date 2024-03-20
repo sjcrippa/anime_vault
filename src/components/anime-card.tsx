@@ -17,12 +17,12 @@ interface Prop {
   index: number;
 }
 
-function AnimeCard({ anime }: Prop) {
+export default function AnimeCard({ anime }: Prop) {
   return (
     <div className="max-w-sm rounded relative w-full">
       <div className="relative w-full h-[37vh]">
         <Image
-          src={anime.image.original}
+          src={`https://shikimori.one${anime.image.original}`}
           alt={anime.name}
           fill
           className="rounded-xl"
@@ -67,5 +67,3 @@ function AnimeCard({ anime }: Prop) {
     </div>
   );
 }
-
-export default AnimeCard;
